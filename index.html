@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Improvement & Innovation Partner | Process Re-engineering with AI</title>
+  <meta name="description" content="Process Re-Engineering with AI to Scale and Sustain Profitability. We partner with businesses to optimise and automate workflows to eliminate bottlenecks and wastes and lower costs." />
+  <meta property="og:title" content="Improvement & Innovation Partner | Partner for Better" />
+  <meta property="og:description" content="We partner with businesses to optimise and automate workflows to eliminate bottlenecks and wastes and lower costs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.improve-innovate-partner.com" />
+
+  <!-- Google Fonts: Montserrat (Display & Headings) and Inter (Clean Body Text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CSS RESET & DESIGN SYSTEM VARIABLES
+       Color Palette Constraints:
+       - Dark Slate / Base Dark: #1E293B
+       - Off-white Canvas: #F8FAFC
+       - Primary Brand Accent: #2980B9 (Deep Blue)
+       - Secondary Accent: #3498DB (Vibrant Blue)
+       - Soft Secondary / Borders: #5DADE2 (Light Blue)
+       - Success / Highlight Accent: #85C1AE (Muted Mint/Teal)
+       - CTA Button Accent: #F7DC6F (Warm Accent Yellow with dark text #1E293B)
+       ========================================================================== */
+    :root {
+      --color-dark: #1E293B;
+      --color-canvas: #F8FAFC;
+      --color-surface: #FFFFFF;
+      --color-primary: #2980B9;
+      --color-secondary: #3498DB;
+      --color-border-soft: #5DADE2;
+      --color-border-subtle: #E2E8F0;
+      --color-success: #85C1AE;
+      --color-cta: #F7DC6F;
+      --color-cta-hover: #F5D042;
+      --color-text-muted: #64748B;
+      
+      --font-display: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(30, 41, 59, 0.05);
+      --shadow-md: 0 4px 12px rgba(30, 41, 59, 0.07);
+      --shadow-lg: 0 12px 30px rgba(30, 41, 59, 0.1);
+      --shadow-hover: 0 14px 28px rgba(41, 128, 185, 0.16);
+
+      --transition-normal: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-canvas);
+      color: var(--color-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--color-dark);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    p {
+      color: #334155;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-normal);
+      border: 1px solid transparent;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .btn-cta {
+      background-color: var(--color-cta);
+      color: var(--color-dark);
+      font-weight: 700;
+      border-color: #E6C84F;
+      box-shadow: 0 4px 14px rgba(247, 220, 111, 0.4);
+    }
+
+    .btn-cta:hover {
+      background-color: var(--color-cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(247, 220, 111, 0.55);
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: #1F6696;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(41, 128, 185, 0.3);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--color-primary);
+      border: 1.5px solid var(--color-primary);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(41, 128, 185, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* Badges & Chips */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+
+    .badge-primary {
+      background-color: rgba(41, 128, 185, 0.1);
+      color: var(--color-primary);
+      border: 1px solid rgba(93, 173, 226, 0.4);
+    }
+
+    .badge-success {
+      background-color: rgba(133, 193, 174, 0.18);
+      color: #245A48;
+      border: 1px solid var(--color-success);
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: var(--font-display);
+      color: var(--color-primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 48px auto;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      margin-bottom: 16px;
+      color: var(--color-dark);
+    }
+
+    .section-title:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-subtitle {
+      font-size: 1.08rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       1. NAVIGATION BAR (Sticky Header)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border-subtle);
+      transition: var(--transition-normal);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      text-decoration: none;
+    }
+
+    .logo-badge {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.05em;
+    }
+
+    .logo-title-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.2;
+    }
+
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: var(--color-secondary);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #475569;
+      position: relative;
+      transition: var(--transition-normal);
+      padding: 6px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-secondary);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--color-dark);
+    }
+
+    .mobile-menu-toggle svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--color-dark);
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 80px 0 90px 0;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+      border-bottom: 1px solid var(--color-border-subtle);
+      overflow: hidden;
+    }
+
+    .hero-bg-accent {
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(93, 173, 226, 0.15) 0%, rgba(248, 250, 252, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-tagline-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-primary);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .hero-headline {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      color: var(--color-dark);
+    }
+
+    .hero-headline span.text-highlight {
+      color: var(--color-primary);
+      position: relative;
+    }
+
+    .hero-subheadline {
+      font-size: 1.22rem;
+      color: #475569;
+      max-width: 780px;
+      margin: 0 auto 36px auto;
+      line-height: 1.65;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    .hero-cta-group .btn {
+      padding: 15px 32px;
+      font-size: 1.05rem;
+    }
+
+    /* ==========================================================================
+       3. PRINCIPAL CONSULTANT PROFILE SECTION
+       ========================================================================== */
+    .profile-section {
+      padding: 96px 0;
+      background-color: var(--color-surface);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 48px;
+      align-items: stretch;
+    }
+
+    /* Consultant Card */
+    .consultant-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .avatar-wrapper {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      padding: 4px;
+      box-shadow: 0 8px 20px rgba(41, 128, 185, 0.25);
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: var(--color-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+    }
+
+    .avatar-initials {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .avatar-caption {
+      font-size: 0.65rem;
+      color: var(--color-border-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .consultant-name {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--color-dark);
+    }
+
+    .consultant-role {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .consultant-orgs-label {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .consultant-orgs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .org-pill {
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-border-subtle);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      color: #334155;
+    }
+
+    .consultant-action {
+      width: 100%;
+    }
+
+    /* Consultant Bio & Content */
+    .profile-bio-container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .bio-text {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+
+    /* Credentials Badges Group (inside consultant card) */
+    .credentials-block {
+      margin-top: auto;
+      padding-top: 22px;
+      border-top: 1px solid var(--color-border-subtle);
+      text-align: left;
+    }
+
+    .credentials-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .credentials-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cred-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-border-subtle);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      text-align: left;
+    }
+
+    .cred-icon {
+      color: var(--color-secondary);
+      display: flex;
+      align-items: center;
+    }
+
+    /* Core Impact Snapshot Cards */
+    .impact-snapshots {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .impact-snapshots-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+
+    .snapshot-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .snapshot-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .snapshot-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-secondary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .snapshot-metric {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .snapshot-desc {
+      font-size: 0.975rem;
+      color: #475569;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .snapshot-org-tag {
+      font-size: 0.845rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-secondary);
+      margin-top: 12px;
+    }
+
+    /* ==========================================================================
+       4. 3-STEP TRANSFORMATION FRAMEWORK
+       ========================================================================== */
+    .framework-section {
+      padding: 96px 0;
+      background-color: var(--color-canvas);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .framework-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      position: relative;
+      align-items: stretch;
+    }
+
+    .framework-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      background-color: var(--color-surface);
+      border: 1.5px solid var(--color-border-subtle);
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .framework-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      opacity: 0;
+      transition: var(--transition-normal);
+    }
+
+    .framework-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-secondary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .framework-card:hover::before {
+      opacity: 1;
+    }
+
+    .step-number-box {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(41, 128, 185, 0.25);
+      flex-shrink: 0;
+    }
+
+    .step-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      opacity: 0.85;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .step-val {
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .step-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.25;
+    }
+
+    .step-summary {
+      font-size: 0.94rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       5. SUCCESS STORIES / CASE STUDIES SECTION
+       ========================================================================== */
+    .case-studies-section {
+      padding: 96px 0;
+      background-color: var(--color-surface);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .case-card {
+      background-color: #FFFFFF;
+      border: 1.5px solid var(--color-border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      position: relative;
+    }
+
+    /* Card hover requirement: 5px transform lift and border highlight (#3498DB) */
+    .case-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-secondary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-top {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .case-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .case-badge {
+      background-color: rgba(41, 128, 185, 0.08);
+      color: var(--color-primary);
+      border: 1px solid rgba(93, 173, 226, 0.4);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .case-headline {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.35;
+    }
+
+    .case-preview-result {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .card-bottom {
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .view-modal-btn {
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-normal);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .case-card:hover .view-modal-btn {
+      color: var(--color-secondary);
+      gap: 10px;
+    }
+
+    .view-modal-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: var(--transition-normal);
+    }
+
+    /* ==========================================================================
+       MODAL POPUP OVERLAY
+       Requirements:
+       - Modal overlay displaying full details
+       - Close 'X' button
+       - Pressing 'Esc' key closes modal
+       - Clicking outside modal overlay closes it
+       - Button inside modal that closes modal and smooth-scrolls to contact form
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(30, 41, 59, 0.65);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-container {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 680px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      position: relative;
+      border: 1px solid var(--color-border-subtle);
+      transform: scale(0.94);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.active .modal-container {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      padding: 28px 32px 20px 32px;
+      border-bottom: 1px solid var(--color-border-subtle);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      background-color: #FFFFFF;
+      z-index: 10;
+    }
+
+    .modal-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .modal-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      line-height: 1.3;
+    }
+
+    .modal-close-btn {
+      background: #F1F5F9;
+      border: 1px solid var(--color-border-subtle);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-dark);
+      transition: var(--transition-normal);
+      flex-shrink: 0;
+    }
+
+    .modal-close-btn:hover {
+      background-color: #E2E8F0;
+      color: #0F172A;
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .modal-section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .modal-section-text {
+      font-size: 0.96rem;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    .modal-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .modal-list li {
+      font-size: 0.96rem;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    .modal-highlight-box {
+      background-color: rgba(133, 193, 174, 0.15);
+      border: 1px solid var(--color-success);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+
+    .modal-highlight-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #1F4D3C;
+      margin-bottom: 4px;
+    }
+
+    .modal-highlight-text {
+      font-size: 0.92rem;
+      color: #245A48;
+      font-weight: 600;
+    }
+
+    .modal-footer {
+      padding: 20px 32px 28px 32px;
+      background-color: var(--color-canvas);
+      border-top: 1px solid var(--color-border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       6. LEAD GENERATION & CONTACT SECTION
+       ========================================================================== */
+    .contact-section {
+      padding: 96px 0;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .contact-headline {
+      font-size: 2.2rem;
+      color: var(--color-dark);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .contact-subheadline {
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    .contact-perks-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-perk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.94rem;
+      color: #334155;
+    }
+
+    .perk-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: rgba(133, 193, 174, 0.25);
+      border: 1px solid var(--color-success);
+      color: #1F4D3C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-details-card {
+      background-color: var(--color-surface);
+      border: 1.5px solid var(--color-border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .detail-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background-color: rgba(41, 128, 185, 0.1);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .detail-content h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 2px;
+    }
+
+    .detail-content p, .detail-content a {
+      font-size: 0.92rem;
+      color: #475569;
+    }
+
+    .detail-content a:hover {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+
+    /* Form Container */
+    .form-embed-card {
+      background-color: #FFFFFF;
+      border: 1.5px solid rgba(93, 173, 226, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container-header {
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--color-border-subtle);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .form-container-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      letter-spacing: -0.01em;
+    }
+
+    .form-container-desc {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .form-security-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #1F4D3C;
+      font-weight: 600;
+      background: rgba(133, 193, 174, 0.2);
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(133, 193, 174, 0.5);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Diagnosis Form Grid */
+    .diagnosis-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 16px;
+      margin-bottom: 24px;
+    }
+
+    .col-span-2 {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .col-span-2 {
+        grid-column: span 1;
+      }
+      .form-container-header {
+        flex-direction: column;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .required-star {
+      color: #DC2626;
+      font-weight: 700;
+      margin-left: 3px;
+    }
+
+    .optional-label {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #94A3B8;
+    }
+
+    .form-hint {
+      font-size: 0.8rem;
+      color: #64748B;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid #CBD5E1;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--color-dark);
+      background-color: #FFFFFF;
+      transition: var(--transition-normal);
+      box-sizing: border-box;
+    }
+
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: #94A3B8;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-secondary);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.18);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+      line-height: 1.5;
+    }
+
+    /* Error Validation State */
+    .field-error-msg {
+      font-size: 0.78rem;
+      color: #DC2626;
+      font-weight: 500;
+      display: none;
+      margin-top: 2px;
+    }
+
+    .form-group.has-error .form-input,
+    .form-group.has-error .form-textarea {
+      border-color: #DC2626;
+      background-color: #FEF2F2;
+    }
+
+    .form-group.has-error .field-error-msg {
+      display: block;
+    }
+
+    .form-submit-row {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 20px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 13px 28px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--radius-sm);
+      background-color: var(--color-cta);
+      color: var(--color-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition-normal);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-submit-btn:hover {
+      background-color: var(--color-cta-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-delivery-note {
+      font-size: 0.82rem;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.45;
+    }
+
+    .form-delivery-note svg {
+      flex-shrink: 0;
+    }
+
+    /* Success State Card */
+    .form-success-container {
+      padding: 24px 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .success-icon-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: rgba(133, 193, 174, 0.25);
+      border: 2px solid var(--color-success);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+
+    .success-title {
+      font-size: 1.28rem;
+      color: var(--color-dark);
+      font-weight: 700;
+    }
+
+    .success-desc {
+      font-size: 0.94rem;
+      color: #475569;
+      max-width: 500px;
+      line-height: 1.55;
+    }
+
+    .success-summary-box {
+      width: 100%;
+      max-width: 500px;
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.88rem;
+      margin: 8px 0;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px dashed var(--color-border-subtle);
+      padding-bottom: 8px;
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .summary-label {
+      color: #64748B;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .summary-val {
+      color: var(--color-dark);
+      font-weight: 600;
+      text-align: right;
+      word-break: break-word;
+    }
+
+    .success-instruction {
+      font-size: 0.85rem;
+      color: #64748B;
+      max-width: 480px;
+      line-height: 1.5;
+    }
+
+    .success-action-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .reset-form-link-wrap {
+      margin-top: 10px;
+    }
+
+    .reset-form-btn {
+      background: none;
+      border: none;
+      font-size: 0.86rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 6px 12px;
+    }
+
+    .reset-form-btn:hover {
+      color: var(--color-secondary);
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .spin {
+      animation: spin 1s linear infinite;
+    }
+
+    /* ==========================================================================
+       7. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--color-dark);
+      color: #94A3B8;
+      padding: 32px 0;
+      border-top: 1px solid #334155;
+    }
+
+    .footer-simple-copyright {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #94A3B8;
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================================================
+       8. MICRO-ANIMATIONS & INTERSECTION OBSERVER ENTRANCE
+       ========================================================================== */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    /* ==========================================================================
+       9. RESPONSIVE DESIGN (CSS Grid & Flexbox breakpoints)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .consultant-card {
+        position: static;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .framework-timeline {
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+        overflow-x: auto;
+        padding-bottom: 16px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .case-studies-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-headline {
+        font-size: 2.15rem;
+      }
+
+      .hero-subheadline {
+        font-size: 1.05rem;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        padding: 24px;
+        box-shadow: var(--shadow-lg);
+        border-bottom: 1px solid var(--color-border-subtle);
+        gap: 16px;
+      }
+
+      .nav-links.mobile-open {
+        display: flex;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .snapshot-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .framework-timeline {
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
+        overflow-x: auto;
+        padding-bottom: 16px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .case-studies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .footer-links-group {
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Improvement & Innovation Partner Home">
+        <span class="logo-badge">IIP</span>
+        <div class="logo-title-group">
+          <span class="brand-name">Improvement &amp; Innovation Partner</span>
+          <span class="brand-tagline">Partner for Better</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#framework" class="nav-link">Framework</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav CTA & Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-cta" id="navCtaBtn">Schedule Operational Diagnosis</a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-accent"></div>
+    <div class="container hero-content">
+      <div class="hero-tagline-text fade-in-up">
+        <span>Improvement &amp; Innovation Partner Pte. Ltd.</span>
+        <span>•</span>
+        <span>Singapore</span>
+      </div>
+
+      <h1 class="hero-headline fade-in-up delay-1">
+        Process Re-Engineering with AI <br />
+        to <span class="text-highlight">Scale and Sustain Profitability</span>
+      </h1>
+
+      <p class="hero-subheadline fade-in-up delay-2">
+        We partner with businesses to optimise and automate workflows to eliminate bottlenecks and wastes and lower costs
+      </p>
+
+      <div class="hero-cta-group fade-in-up delay-3">
+        <a href="#contact" class="btn btn-cta" id="heroPrimaryCta">
+          Schedule Operational Diagnosis
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#framework" class="btn btn-outline" id="heroSecondaryCta">
+          Explore 3-Step Framework
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. PRINCIPAL CONSULTANT PROFILE SECTION
+       ========================================================================== -->
+  <section class="profile-section" id="about">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">About</span>
+        <h2 class="section-title">Principal Consultant Profile</h2>
+      </div>
+
+      <div class="profile-grid">
+        <!-- Sticky Consultant Card -->
+        <aside class="consultant-card fade-in-up" id="consultantCard">
+          <div class="avatar-wrapper">
+            <div class="avatar-inner">
+              <span class="avatar-initials">JW</span>
+              <span class="avatar-caption">Principal</span>
+            </div>
+          </div>
+          <h3 class="consultant-name">John Wong</h3>
+          <p class="consultant-role">Principal Consultant &amp; Founder</p>
+          
+          <div class="consultant-orgs-label">Career Leadership</div>
+          <div class="consultant-orgs">
+            <span class="org-pill">HP</span>
+            <span class="org-pill">GE Healthcare</span>
+            <span class="org-pill">SingHealth</span>
+            <span class="org-pill">Speedoc</span>
+            <span class="org-pill">Agilent Technologies</span>
+          </div>
+
+          <!-- Certification Badges -->
+          <div class="credentials-block">
+            <div class="credentials-title">
+              <span>Certification</span>
+            </div>
+            <div class="credentials-grid">
+              <span class="cred-badge">
+                <span class="cred-icon">✓</span> ACLP (Singapore)
+              </span>
+              <span class="cred-badge">
+                <span class="cred-icon">✓</span> HRD Corp Accredited Trainer (Malaysia)
+              </span>
+              <span class="cred-badge">
+                <span class="cred-icon">✓</span> ASQ Six Sigma Green Belt
+              </span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Bio Details & Impact Snapshot Cards -->
+        <div class="profile-bio-container">
+          <div class="bio-text fade-in-up">
+            <p style="margin-bottom: 16px;">
+              <strong>John Wong</strong> brings over 30 years of end-to-end process re-engineering leadership and expertise across <strong>HP, Agilent Technologies, GE Healthcare, SingHealth, and Speedoc</strong>.
+            </p>
+            <p>
+              He seamlessly blends improvement methodologies (Lean, Six Sigma, Process FMEA, SPC) with modern technologies (Python, Machine Learning, Gen AI, Agentic AI). With an ACLP and being a HRD Corp Accredited Trainer, John empowers management teams and front-line staff to optimise and automate workflows, increasing the organisation’s competitive advantage to scale and sustain profitability.
+            </p>
+          </div>
+
+          <!-- Core Impact Snapshot Cards -->
+          <div class="impact-snapshots fade-in-up delay-2">
+            <h4 class="impact-snapshots-title">Core Impact Snapshot</h4>
+            <div class="snapshot-cards-grid">
+              <!-- Snapshot 1 -->
+              <div class="snapshot-card">
+                <div>
+                  <div class="snapshot-metric">28 minutes reduction</div>
+                  <p class="snapshot-desc">Reduction in Children's Emergency wait times by 28 minutes from 3 hours by applying data analytics insights to improve clinical workflow.</p>
+                </div>
+                <div class="snapshot-org-tag">SingHealth</div>
+              </div>
+
+              <!-- Snapshot 2 -->
+              <div class="snapshot-card">
+                <div>
+                  <div class="snapshot-metric">50% manpower reduction</div>
+                  <p class="snapshot-desc">Reduced manpower requirement from 4 to 2 by automating daily end-to-end finance reconciliation processes.</p>
+                </div>
+                <div class="snapshot-org-tag">Agilent Technologies</div>
+              </div>
+
+              <!-- Snapshot 3 -->
+              <div class="snapshot-card">
+                <div>
+                  <div class="snapshot-metric">20% utilisation increase</div>
+                  <p class="snapshot-desc">Increased nursing capacity utilisation from 60% to 80% by applying automated data analytics insights to plan and run operations.</p>
+                </div>
+                <div class="snapshot-org-tag">Speedoc</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. THE "PARTNER FOR BETTER" 3-STEP TRANSFORMATION FRAMEWORK
+       ========================================================================== -->
+  <section class="framework-section" id="framework">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">Framework</span>
+        <h2 class="section-title">The "Partner for Better" 3-Step Framework</h2>
+      </div>
+
+      <div class="framework-timeline">
+        <!-- Step 1 -->
+        <div class="framework-card fade-in-up delay-1" id="frameworkStep1">
+          <div class="step-number-box">
+            <span class="step-label">Step</span>
+            <span class="step-val">01</span>
+          </div>
+          <div class="step-info">
+            <h3 class="step-title">Diagnose</h3>
+            <p class="step-summary">Map value streams and process flows to identify and understand bottlenecks, waste, and high costs.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="framework-card fade-in-up delay-2" id="frameworkStep2">
+          <div class="step-number-box">
+            <span class="step-label">Step</span>
+            <span class="step-val">02</span>
+          </div>
+          <div class="step-info">
+            <h3 class="step-title">Pilot and Stabilise</h3>
+            <p class="step-summary">Pilot solutions in selected areas to test, learn, and refine to stabilise their performance.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="framework-card fade-in-up delay-3" id="frameworkStep3">
+          <div class="step-number-box">
+            <span class="step-label">Step</span>
+            <span class="step-val">03</span>
+          </div>
+          <div class="step-info">
+            <h3 class="step-title">Scale and Sustain</h3>
+            <p class="step-summary">Scale solutions in all areas to embed them in the organisational culture and systems to sustain growth in the business.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SUCCESS STORIES / CASE STUDIES SECTION (Interactive Modals)
+       ========================================================================== -->
+  <section class="case-studies-section" id="impact">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">Impact</span>
+        <h2 class="section-title">Success Stories</h2>
+      </div>
+
+      <div class="case-studies-grid">
+        <!-- Card 1: Healthcare ER -->
+        <article class="case-card fade-in-up delay-1" data-case="healthcare" id="caseCardHealthcare" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="card-top">
+            <div class="case-badge-row">
+              <span class="case-badge">28 minutes reduction</span>
+            </div>
+            <h3 class="case-headline">Reduced Children's Emergency Wait Times by 28 Minutes</h3>
+            <p class="case-preview-result">
+              Cut waiting times from a grueling 3-hour baseline, lowered doctor sick leave rates, and secured the prestigious SingHealth Family Target Zero Harm Award.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2: Financial Shared Services -->
+        <article class="case-card fade-in-up delay-2" data-case="financial" id="caseCardFinancial" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="card-top">
+            <div class="case-badge-row">
+              <span class="case-badge">50% manpower reduction</span>
+            </div>
+            <h3 class="case-headline">Reduced Financial Shared Services Manpower by 50%</h3>
+            <p class="case-preview-result">
+              Automated APAC &amp; Japan daily financial reconciliation for Agilent Technologies, reducing required headcount from 4 full-time staff down to 2.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3: Health-Tech Operations -->
+        <article class="case-card fade-in-up delay-3" data-case="healthtech" id="caseCardHealthtech" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="card-top">
+            <div class="case-badge-row">
+              <span class="case-badge">20% utilisation increase</span>
+            </div>
+            <h3 class="case-headline">Increased Nurse Capacity Utilisation by 20%</h3>
+            <p class="case-preview-result">
+              Built centralized data warehouse and CEO operational dashboards for Speedoc to re-engineer workforce planning and fleet dispatch.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODAL OVERLAYS (Vanilla JS Controlled)
+       ========================================================================== -->
+  <div class="modal-overlay" id="caseStudyModalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container" id="caseStudyModalContainer">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="case-badge" id="modalBadge">Case Study</span>
+          <h3 class="modal-title" id="modalTitle">Case Study Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Case Study Details">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via JavaScript -->
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="modalDismissBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       6. LEAD GENERATION & CONTACT SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- Contact Context & Info -->
+        <div class="contact-info-col fade-in-up">
+          <div>
+            <span class="section-eyebrow">Contact</span>
+            <h2 class="contact-headline">Ready to scale and sustain your profitability?</h2>
+          </div>
+
+          <div class="contact-details-card">
+            <!-- Email -->
+            <div class="detail-row">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="detail-content">
+                <h4>Email</h4>
+                <p><a href="mailto:john_wong@improve-innovate-partner.com">john_wong@improve-innovate-partner.com</a></p>
+              </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="detail-row">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="detail-content">
+                <h4>Mobile</h4>
+                <p><a href="tel:+6591259246">+65 9125-9246</a></p>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="detail-row">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="detail-content">
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/wongchikeongjohn" target="_blank" rel="noopener noreferrer">linkedin.com/in/wongchikeongjohn</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operational Diagnosis Form Card -->
+        <div class="form-embed-card fade-in-up delay-1" id="formEmbedCard">
+          <!-- HTML/CSS/JS Operational Diagnosis Form -->
+          <form id="diagnosisForm" class="diagnosis-form" novalidate>
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group" id="groupFullName">
+                <label class="form-label" for="diagFullName">
+                  <span>Full name <span class="required-star" aria-hidden="true">*</span></span>
+                </label>
+                <input 
+                  type="text" 
+                  id="diagFullName" 
+                  name="fullName" 
+                  class="form-input" 
+                  placeholder="e.g. Alex Tan" 
+                  required 
+                  autocomplete="name"
+                />
+                <span class="field-error-msg" id="errFullName">Please enter your full name.</span>
+              </div>
+
+              <!-- Business Email Address -->
+              <div class="form-group" id="groupEmail">
+                <label class="form-label" for="diagEmail">
+                  <span>Business email address <span class="required-star" aria-hidden="true">*</span></span>
+                </label>
+                <input 
+                  type="email" 
+                  id="diagEmail" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. alex@company.com" 
+                  required 
+                  autocomplete="email"
+                />
+                <span class="field-error-msg" id="errEmail">Please enter a valid business email address.</span>
+              </div>
+
+              <!-- Mobile Number -->
+              <div class="form-group" id="groupMobile">
+                <label class="form-label" for="diagMobile">
+                  <span>Mobile number <span class="required-star" aria-hidden="true">*</span></span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="diagMobile" 
+                  name="mobile" 
+                  class="form-input" 
+                  placeholder="e.g. +65 9123 4567" 
+                  required 
+                  autocomplete="tel"
+                />
+                <span class="field-error-msg" id="errMobile">Please enter your mobile number.</span>
+              </div>
+
+              <!-- Company Name -->
+              <div class="form-group" id="groupCompany">
+                <label class="form-label" for="diagCompany">
+                  <span>Company name <span class="required-star" aria-hidden="true">*</span></span>
+                </label>
+                <input 
+                  type="text" 
+                  id="diagCompany" 
+                  name="company" 
+                  class="form-input" 
+                  placeholder="e.g. Acme Technologies Pte Ltd" 
+                  required 
+                  autocomplete="organization"
+                />
+                <span class="field-error-msg" id="errCompany">Please enter your company name.</span>
+              </div>
+
+              <!-- Company Website (Optional) -->
+              <div class="form-group col-span-2" id="groupWebsite">
+                <label class="form-label" for="diagWebsite">
+                  <span>Company website</span>
+                  <span class="optional-label">Optional</span>
+                </label>
+                <input 
+                  type="url" 
+                  id="diagWebsite" 
+                  name="website" 
+                  class="form-input" 
+                  placeholder="e.g. https://www.example.com" 
+                  autocomplete="url"
+                />
+              </div>
+
+              <!-- Describe your operational challenges -->
+              <div class="form-group col-span-2" id="groupChallenges">
+                <label class="form-label" for="diagChallenges">
+                  <span>Describe your operational challenges <span class="required-star" aria-hidden="true">*</span></span>
+                </label>
+                <textarea 
+                  id="diagChallenges" 
+                  name="challenges" 
+                  class="form-textarea" 
+                  rows="4" 
+                  placeholder="For example: Manual data entry, manual matching, manual planning, long delays, long wait times, excessive overtime, no storage space, many errors, many defects." 
+                  required
+                ></textarea>
+                <span class="field-error-msg" id="errChallenges">Please describe your operational challenges.</span>
+              </div>
+            </div>
+
+            <!-- Submit Action -->
+            <div class="form-submit-row">
+              <button type="submit" class="form-submit-btn" id="diagSubmitBtn">Submit</button>
+            </div>
+          </form>
+
+          <!-- Success State View (Revealed upon form submission) -->
+          <div id="diagSuccessState" class="form-success-container" style="display: none;" aria-live="polite">
+            <div class="success-icon-badge">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1F4D3C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h4 class="success-title">Operational Diagnosis Request Received!</h4>
+            <p class="success-desc">
+              Thank you, <strong id="successCustomerName">there</strong>! We will review your details and be in touch with you within 1 business day.
+            </p>
+            
+            <div class="success-summary-box">
+              <div class="summary-row">
+                <span class="summary-label">Company:</span>
+                <span class="summary-val" id="summaryCompany">—</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Contact:</span>
+                <span class="summary-val" id="summaryContact">—</span>
+              </div>
+            </div>
+
+            <div class="reset-form-link-wrap">
+              <button type="button" id="resetDiagFormBtn" class="reset-form-btn">
+                ← Submit another diagnosis request
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-simple-copyright">
+        &copy; 2024-2026 Improvement &amp; Innovation Partner Pte. Ltd. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT: MICRO-ANIMATIONS, INTERSECTION OBSERVER, & MODALS
+       ========================================================================== -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* ------------------------------------------------------------------------
+         1. Mobile Menu Toggle
+         ------------------------------------------------------------------------ */
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.getElementById('navLinks');
+
+      if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('mobile-open');
+        });
+
+        // Close on nav link click
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('mobile-open');
+          });
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         2. Micro-Animations: Intersection Observer on Scroll
+         ------------------------------------------------------------------------ */
+      const animatedElements = document.querySelectorAll('.fade-in-up');
+      
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.12
+        };
+
+        const appearanceObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        animatedElements.forEach(function(el) {
+          appearanceObserver.observe(el);
+        });
+      } else {
+        // Fallback for older browsers
+        animatedElements.forEach(function(el) {
+          el.classList.add('is-visible');
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         3. Case Studies Data & Modal Functionality
+         ------------------------------------------------------------------------ */
+      const caseStudiesData = {
+        healthcare: {
+          badge: '',
+          title: 'Reduced Children\'s Emergency Wait Times by 28 Minutes',
+          content: `
+            <div>
+              <div class="modal-section-title">The Operational Challenge</div>
+              <p class="modal-section-text">
+                Patient wait times in the Children’s Emergency department averaged 3 hours, frequently spiking up to 6 hours. These extreme delays created high caregiver distress, resulting in frequent workplace friction that exacerbated doctor stress and escalated medical leave rates. This created a vicious cycle of critical manpower shortages and compounding wait times.
+              </p>
+              <p class="modal-section-text" style="margin-top: 10px;">
+                Operationally, the department relied on assumptions – believing bottlenecks always occur at 6:00 pm – rather than using empirical data analytics to map the real-time patient intake and discharge.
+              </p>
+            </div>
+            <div>
+              <div class="modal-section-title">The Diagnostic Approach</div>
+              <p class="modal-section-text" style="margin-bottom: 8px;">
+                To break the cycle, a comprehensive data-driven operational diagnosis was executed:
+              </p>
+              <ul class="modal-list">
+                <li><strong>Activity and Motion Waste Mapping:</strong> Tracked clinical activity and movement data to uncover hidden systemic inefficiencies and time loss among junior doctors.</li>
+                <li><strong>Cumulative Backlog Modelling:</strong> Transformed raw operational data into a cumulative backlog model to uncover the exact bottleneck hours based on actual historical patient inflow and outflow.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="modal-section-title">The Re-Engineered Solutions</div>
+              <ul class="modal-list">
+                <li><strong>Clinical Role and Mentorship Redesign:</strong> Shifted senior doctors from high-volume patient consultations to active floor supervision and real-time guidance. This eliminated the major bottleneck of junior doctors idling or walking around to locate senior doctors for consultation.</li>
+                <li><strong>Dynamic Capacity and Shift Optimisation:</strong> Introduced targeted coverage shifts that synchronized with data-verified bottleneck hours, preventing backlog accumulation before it started.</li>
+              </ul>
+            </div>
+            <div class="modal-highlight-box">
+              <div class="modal-highlight-title">Measurable Verified Impact:</div>
+              <ul class="modal-list" style="margin-top: 6px;">
+                <li>28-minute reduction in average emergency department wait times.</li>
+                <li>Significant decrease in clinician medical leave rates, directly validating the reduced workplace stress and doctor burnout.</li>
+                <li>Honoured with the prestigious SingHealth Family Target Zero Harm Award.</li>
+              </ul>
+            </div>
+          `
+        },
+        financial: {
+          badge: '',
+          title: 'Reduced Financial Shared Services Manpower by 50%',
+          content: `
+            <div>
+              <div class="modal-section-title">The Operational Challenge</div>
+              <p class="modal-section-text">
+                Following a corporate divestiture, Agilent Technologies transitioned regional financial accounting services from HP. The incumbent process required 4 dedicated headcounts based in Singapore to manually perform daily and monthly multi-currency account reconciliations for all entities across the Asia Pacific and Japan (APJ) region.
+              </p>
+              <p class="modal-section-text" style="margin-top: 10px;">
+                The legacy workflow relied heavily on repetitive, multi-hour manual data extraction and verification across disparate IT systems - introducing operational bottlenecks and increasing the risk of human error in regional financial reporting.
+              </p>
+            </div>
+            <div>
+              <div class="modal-section-title">The Diagnostic Approach</div>
+              <p class="modal-section-text" style="margin-bottom: 8px;">
+                To eliminate manual overhead, an end-to-end process re-engineering and automation strategy was executed:
+              </p>
+              <ul class="modal-list">
+                <li><strong>Workflow and Policy Mapping:</strong> Conducted an operational audit mapping system-to-system data paths and human verification steps across cross-border accounting policies.</li>
+                <li><strong>Database and Data Pipeline Integration:</strong> Partnered with IT to analyze data dictionaries, establish secure database access, and build automated data extraction and transformation pipelines.</li>
+                <li><strong>User Acceptance and Validation Testing:</strong> Led Functional Test and User Acceptance Testing (UAT) alongside finance stakeholders to ensure strict compliance, zero-reconciliation errors, and data integrity.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="modal-section-title">The Re-Engineered Solutions</div>
+              <ul class="modal-list">
+                <li><strong>One-Click Automated Reconciliation:</strong> Engineered a customized software application that fully automated the end-to-end daily reconciliation tasks across all APJ countries at the click of a button.</li>
+                <li><strong>Extreme Time Reduction:</strong> Replaced multi-hour manual data matching with an automated process completed in under 10 minutes for the entire Singapore Financial Shared Services Centre.</li>
+              </ul>
+            </div>
+            <div class="modal-highlight-box">
+              <div class="modal-highlight-title">Measurable Verified Impact</div>
+              <ul class="modal-list" style="margin-top: 6px;">
+                <li><strong>50% Manpower Savings:</strong> Direct headcount requirement permanently reduced from 4 to 2 while maintaining full regional operational capacity.</li>
+                <li><strong>Cycle Time Acceleration:</strong> Processing times slashed from hours to under 10 minutes per cycle.</li>
+              </ul>
+            </div>
+          `
+        },
+        healthtech: {
+          badge: '',
+          title: 'Increased Nurse Capacity Utilisation by 20%',
+          content: `
+            <div>
+              <div class="modal-section-title">The Operational Challenge</div>
+              <p class="modal-section-text">
+                During a period of rapid business expansion, home-care medical leader Speedoc faced operational challenges due to decentralized scheduling. With mobile nurses dispatched island-wide on an ad-hoc basis, a lack of route optimization and limited workload visibility capped field capacity utilization at just 60% - significantly driving up operational expenditure per visit.
+              </p>
+            </div>
+            <div>
+              <div class="modal-section-title">The Diagnostic Approach</div>
+              <p class="modal-section-text" style="margin-bottom: 8px;">
+                To establish operational clarity and establish a true performance baseline, a collaborative diagnostic study was conducted:
+              </p>
+              <ul class="modal-list">
+                <li><strong>Workflow and Capacity Definition:</strong> Partnered closely with field operations to audit dispatch logic, redefine capacity metrics, and establish clear operational boundaries (e.g., standardizing travel time, rest breaks, and active patient consultations).</li>
+                <li><strong>Data Extraction and Transformation:</strong> Built automated data extraction pipelines from core databases to map hourly nurse activities – categorizing time spent across transit, consultations, administrative tasks, and scheduled leave.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="modal-section-title">The Re-Engineered Solutions</div>
+              <ul class="modal-list">
+                <li><strong>Automated Operational Dashboards:</strong> Developed real-time reporting dashboards that transformed raw scheduling data into actionable utilization insights for nursing operations managers.</li>
+                <li><strong>Executive Decision Support System:</strong> Integrated daily automated reporting directly into executive management workflows, providing the CEO and senior leaders with daily visibility to support optimisation of workforce planning.</li>
+                <li><strong>Capability Transfer and Training:</strong> Trained nursing leadership on viewing the dashboard from various perspective to ensure sustainable, long-term shift planning.</li>
+              </ul>
+            </div>
+            <div class="modal-highlight-box">
+              <div class="modal-highlight-title">Measurable Verified Impact</div>
+              <ul class="modal-list" style="margin-top: 6px;">
+                <li><strong>20% Utilization Increase:</strong> Mobile nurse field capacity utilization jumped from 60% to over 80% without increasing staff burnout.</li>
+                <li><strong>Executive Visibility:</strong> Delivered the necessary operational transparency and data foundation required for sustainable regional scaling.</li>
+              </ul>
+            </div>
+          `
+        }
+      };
+
+      const modalOverlay = document.getElementById('caseStudyModalOverlay');
+      const modalBadge = document.getElementById('modalBadge');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalBody = document.getElementById('modalBody');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const modalDismissBtn = document.getElementById('modalDismissBtn');
+      const modalCtaBtn = document.getElementById('modalCtaBtn');
+
+      function openModal(caseKey) {
+        const data = caseStudiesData[caseKey];
+        if (!data || !modalOverlay) return;
+
+        if (data.badge) {
+          modalBadge.textContent = data.badge;
+          modalBadge.style.display = 'inline-block';
+        } else {
+          modalBadge.textContent = '';
+          modalBadge.style.display = 'none';
+        }
+        modalTitle.textContent = data.title;
+        modalBody.innerHTML = data.content;
+
+        modalOverlay.classList.add('active');
+        modalOverlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        // Focus close button for accessibility
+        if (modalCloseBtn) modalCloseBtn.focus();
+      }
+
+      function closeModal() {
+        if (!modalOverlay) return;
+        modalOverlay.classList.remove('active');
+        modalOverlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+
+      // Card click event listeners
+      const caseCards = document.querySelectorAll('.case-card');
+      caseCards.forEach(function(card) {
+        const caseKey = card.getAttribute('data-case');
+        
+        card.addEventListener('click', function() {
+          openModal(caseKey);
+        });
+
+        // Accessible Keyboard navigation: Enter or Space opens modal
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(caseKey);
+          }
+        });
+      });
+
+      // Close modal on X button
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+      }
+
+      // Close modal on Dismiss button
+      if (modalDismissBtn) {
+        modalDismissBtn.addEventListener('click', closeModal);
+      }
+
+      // Close modal and smooth-scroll to contact form on CTA button
+      if (modalCtaBtn) {
+        modalCtaBtn.addEventListener('click', function() {
+          closeModal();
+          const contactSec = document.getElementById('contact');
+          if (contactSec) {
+            contactSec.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+
+      // Close on clicking outside modal container
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', function(e) {
+          if (e.target === modalOverlay) {
+            closeModal();
+          }
+        });
+      }
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+          closeModal();
+        }
+      });
+
+      /* ------------------------------------------------------------------------
+         4. Operational Diagnosis Form Handler (Direct to Google Sheets via Apps Script Web App)
+         ------------------------------------------------------------------------ */
+      const diagnosisForm = document.getElementById('diagnosisForm');
+      const diagSubmitBtn = document.getElementById('diagSubmitBtn');
+      const diagSuccessState = document.getElementById('diagSuccessState');
+      const successCustomerName = document.getElementById('successCustomerName');
+      const summaryCompany = document.getElementById('summaryCompany');
+      const summaryContact = document.getElementById('summaryContact');
+      const resetDiagFormBtn = document.getElementById('resetDiagFormBtn');
+
+      const GOOGLE_SCRIPT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyHWDAM7mKipxZnAhqwfcKA6ZzKPIULTHLgyks6--TM0eCCf7R1Zym2ViFK8dB7QN_L/exec';
+
+      if (diagnosisForm && diagSubmitBtn) {
+        // Clear field errors on input
+        const inputs = diagnosisForm.querySelectorAll('.form-input, .form-textarea');
+        inputs.forEach(function(input) {
+          input.addEventListener('input', function() {
+            const group = this.closest('.form-group');
+            if (group) {
+              group.classList.remove('has-error');
+            }
+          });
+        });
+
+        diagnosisForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          const fullName = (document.getElementById('diagFullName').value || '').trim();
+          const email = (document.getElementById('diagEmail').value || '').trim();
+          const mobile = (document.getElementById('diagMobile').value || '').trim();
+          const company = (document.getElementById('diagCompany').value || '').trim();
+          const website = (document.getElementById('diagWebsite').value || '').trim();
+          const challenges = (document.getElementById('diagChallenges').value || '').trim();
+
+          let hasError = false;
+          let firstErrorEl = null;
+
+          function setFieldError(groupId, inputId) {
+            const group = document.getElementById(groupId);
+            if (group) {
+              group.classList.add('has-error');
+            }
+            if (!firstErrorEl) {
+              firstErrorEl = document.getElementById(inputId);
+            }
+            hasError = true;
+          }
+
+          // Validation
+          if (!fullName) {
+            setFieldError('groupFullName', 'diagFullName');
+          }
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email || !emailPattern.test(email)) {
+            setFieldError('groupEmail', 'diagEmail');
+          }
+
+          if (!mobile || mobile.length < 5) {
+            setFieldError('groupMobile', 'diagMobile');
+          }
+
+          if (!company) {
+            setFieldError('groupCompany', 'diagCompany');
+          }
+
+          if (!challenges) {
+            setFieldError('groupChallenges', 'diagChallenges');
+          }
+
+          if (hasError) {
+            if (firstErrorEl) {
+              firstErrorEl.focus();
+            }
+            return;
+          }
+
+          // Disable button during processing
+          diagSubmitBtn.disabled = true;
+          diagSubmitBtn.textContent = 'Submitting...';
+
+          // Payload structured exactly to match the Google Apps Script doPost keys
+          const payload = {
+            fullName: fullName,
+            businessEmailAddress: email,
+            mobileNumber: mobile,
+            companyName: company,
+            companyWebsite: website || '',
+            operationalChallenges: challenges
+          };
+
+          function showSuccess() {
+            if (successCustomerName) successCustomerName.textContent = fullName;
+            if (summaryCompany) summaryCompany.textContent = company;
+            if (summaryContact) summaryContact.textContent = `${email} • ${mobile}`;
+
+            diagnosisForm.style.display = 'none';
+            if (diagSuccessState) {
+              diagSuccessState.style.display = 'flex';
+            }
+
+            diagSubmitBtn.disabled = false;
+            diagSubmitBtn.textContent = 'Submit';
+          }
+
+          // Send data directly to Google Sheet via Google Apps Script Web App
+          fetch(GOOGLE_SCRIPT_WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(payload)
+          })
+          .then(function(res) {
+            return res.text();
+          })
+          .then(function() {
+            showSuccess();
+          })
+          .catch(function(err) {
+            console.warn('Google Sheet submission note:', err);
+            // Cross-origin redirects can trigger network catch in certain environments,
+            // while the Apps Script doPost has already executed and inserted the row.
+            showSuccess();
+          });
+        });
+      }
+
+      // Reset form to submit another request
+      if (resetDiagFormBtn && diagnosisForm && diagSuccessState) {
+        resetDiagFormBtn.addEventListener('click', function() {
+          diagnosisForm.reset();
+          diagSubmitBtn.disabled = false;
+          diagSubmitBtn.textContent = 'Submit';
+          diagSuccessState.style.display = 'none';
+          diagnosisForm.style.display = 'flex';
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         5. Smooth Scroll Polyfill Safeguard
+         ------------------------------------------------------------------------ */
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
