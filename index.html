@@ -445,13 +445,25 @@
     }
 
     .avatar-wrapper {
-      width: 140px;
-      height: 140px;
+      width: 148px;
+      height: 148px;
       margin: 0 auto 20px auto;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
       padding: 4px;
-      box-shadow: 0 8px 20px rgba(41, 128, 185, 0.25);
+      box-shadow: 0 8px 24px rgba(41, 128, 185, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      background-color: var(--color-canvas);
     }
 
     .avatar-inner {
@@ -1690,7 +1702,16 @@
         <!-- Sticky Consultant Card -->
         <aside class="consultant-card fade-in-up" id="consultantCard">
           <div class="avatar-wrapper">
-            <div class="avatar-inner">
+            <img 
+              src="john_wong_website_photo.jpg" 
+              alt="John Wong - Principal Consultant &amp; Founder" 
+              class="avatar-img" 
+              id="consultantAvatar"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              onerror="if (this.src.indexOf('john-wong.jpg') === -1) { this.src = 'john-wong.jpg'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
+            />
+            <div class="avatar-inner" style="display: none;">
               <span class="avatar-initials">JW</span>
               <span class="avatar-caption">Principal</span>
             </div>
@@ -2116,7 +2137,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-simple-copyright">
-        &copy; 2024-2026 Improvement &amp; Innovation Partner Pte. Ltd. All rights reserved.
+        &copy; 2024-2026 Improvement &amp; Innovation Partner Pte. Ltd. (UEN: 202451675C) All rights reserved.
       </div>
     </div>
   </footer>
