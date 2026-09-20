@@ -10,22 +10,54 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.improve-innovate-partner.com" />
 
-  <!-- Google Fonts: Montserrat (Display & Headings) and Inter (Clean Body Text) -->
+  <!-- Google Fonts: Google Sans (Product Sans) & Open Sans / Roboto fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Product+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
+    /* Google Sans web font definition */
+    @font-face {
+      font-family: 'Google Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('https://fonts.gstatic.com/s/googlesans/v58/4UaGrEJvKSVuMkMmTSfdaPKza-o.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Google Sans';
+      font-style: normal;
+      font-weight: 500;
+      src: url('https://fonts.gstatic.com/s/googlesans/v58/4UabrEJvKSVuMkMmTSfvuHKCY61b9w.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Google Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: url('https://fonts.gstatic.com/s/googlesans/v58/4UabrEJvKSVuMkMmTSfv7nKCY61b9w.woff2') format('woff2');
+    }
+
+    /* Google Sans Text (optimized specifically for body copy legibility) */
+    @font-face {
+      font-family: 'Google Sans Text';
+      font-style: normal;
+      font-weight: 400;
+      src: url('https://fonts.gstatic.com/s/googlesanstext/v21/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Google Sans Text';
+      font-style: normal;
+      font-weight: 500;
+      src: url('https://fonts.gstatic.com/s/googlesanstext/v21/5aUv9-KzpRiLCAt4Unrc-xIKmCU5qEpWjgF3rw.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Google Sans Text';
+      font-style: normal;
+      font-weight: 700;
+      src: url('https://fonts.gstatic.com/s/googlesanstext/v21/5aUv9-KzpRiLCAt4Unrc-xIKmCU5qEpOgwF3rw.woff2') format('woff2');
+    }
+
     /* ==========================================================================
        CSS RESET & DESIGN SYSTEM VARIABLES
-       Color Palette Constraints:
-       - Dark Slate / Base Dark: #1E293B
-       - Off-white Canvas: #F8FAFC
-       - Primary Brand Accent: #2980B9 (Deep Blue)
-       - Secondary Accent: #3498DB (Vibrant Blue)
-       - Soft Secondary / Borders: #5DADE2 (Light Blue)
-       - Success / Highlight Accent: #85C1AE (Muted Mint/Teal)
-       - CTA Button Accent: #F7DC6F (Warm Accent Yellow with dark text #1E293B)
        ========================================================================== */
     :root {
       --color-dark: #1E293B;
@@ -40,8 +72,9 @@
       --color-cta-hover: #F5D042;
       --color-text-muted: #64748B;
       
-      --font-display: 'Montserrat', sans-serif;
-      --font-body: 'Inter', sans-serif;
+      /* Google Sans font pairing */
+      --font-display: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Google Sans Text', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
       --radius-sm: 6px;
       --radius-md: 12px;
@@ -127,6 +160,7 @@
       border: 1px solid transparent;
       white-space: nowrap;
       text-align: center;
+      font-family: var(--font-display);
     }
 
     .btn-cta {
@@ -176,6 +210,7 @@
       letter-spacing: 0.05em;
       border-radius: var(--radius-pill);
       white-space: nowrap;
+      font-family: var(--font-display);
     }
 
     .badge-primary {
@@ -211,6 +246,8 @@
       font-size: 2.25rem;
       margin-bottom: 16px;
       color: var(--color-dark);
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
     }
 
     .section-title:last-child {
@@ -378,14 +415,16 @@
       letter-spacing: 0.04em;
       margin-bottom: 24px;
       text-transform: uppercase;
+      font-family: var(--font-display);
     }
 
     .hero-headline {
       font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-weight: 700;
+      letter-spacing: -0.025em;
       margin-bottom: 20px;
       color: var(--color-dark);
+      font-family: var(--font-display);
     }
 
     .hero-headline span.text-highlight {
@@ -481,7 +520,7 @@
     .avatar-initials {
       font-family: var(--font-display);
       font-size: 2.2rem;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 0.05em;
       color: #FFFFFF;
       line-height: 1;
@@ -501,6 +540,7 @@
       font-weight: 700;
       margin-bottom: 6px;
       color: var(--color-dark);
+      font-family: var(--font-display);
     }
 
     .consultant-role {
@@ -518,6 +558,7 @@
       letter-spacing: 0.05em;
       margin-bottom: 10px;
       font-weight: 600;
+      font-family: var(--font-display);
     }
 
     .consultant-orgs {
@@ -574,6 +615,7 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
+      font-family: var(--font-display);
     }
 
     .credentials-grid {
@@ -613,6 +655,7 @@
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--color-dark);
+      font-family: var(--font-display);
     }
 
     .snapshot-cards-grid {
@@ -640,8 +683,8 @@
 
     .snapshot-metric {
       font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 800;
+      font-size: 1.45rem;
+      font-weight: 700;
       color: var(--color-primary);
       line-height: 1.2;
       margin-bottom: 8px;
@@ -651,7 +694,7 @@
       font-size: 0.975rem;
       color: #475569;
       line-height: 1.6;
-      font-weight: 500;
+      font-weight: 400;
     }
 
     .snapshot-org-tag {
@@ -661,6 +704,7 @@
       letter-spacing: 0.05em;
       color: var(--color-secondary);
       margin-top: 12px;
+      font-family: var(--font-display);
     }
 
     /* ==========================================================================
@@ -729,7 +773,7 @@
       align-items: center;
       justify-content: center;
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 700;
       box-shadow: 0 4px 12px rgba(41, 128, 185, 0.25);
       flex-shrink: 0;
     }
@@ -759,6 +803,7 @@
       font-weight: 700;
       color: var(--color-dark);
       line-height: 1.25;
+      font-family: var(--font-display);
     }
 
     .step-summary {
@@ -796,7 +841,6 @@
       position: relative;
     }
 
-    /* Card hover requirement: 5px transform lift and border highlight (#3498DB) */
     .case-card:hover {
       transform: translateY(-5px);
       border-color: var(--color-secondary);
@@ -825,6 +869,7 @@
       border-radius: var(--radius-pill);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      font-family: var(--font-display);
     }
 
     .case-headline {
@@ -832,6 +877,7 @@
       font-weight: 700;
       color: var(--color-dark);
       line-height: 1.35;
+      font-family: var(--font-display);
     }
 
     .case-preview-result {
@@ -860,6 +906,7 @@
       border: none;
       cursor: pointer;
       padding: 0;
+      font-family: var(--font-display);
     }
 
     .case-card:hover .view-modal-btn {
@@ -875,12 +922,6 @@
 
     /* ==========================================================================
        MODAL POPUP OVERLAY
-       Requirements:
-       - Modal overlay displaying full details
-       - Close 'X' button
-       - Pressing 'Esc' key closes modal
-       - Clicking outside modal overlay closes it
-       - Button inside modal that closes modal and smooth-scrolls to contact form
        ========================================================================== */
     .modal-overlay {
       position: fixed;
@@ -947,6 +988,7 @@
       font-weight: 700;
       color: var(--color-dark);
       line-height: 1.3;
+      font-family: var(--font-display);
     }
 
     .modal-close-btn {
@@ -984,6 +1026,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 6px;
+      font-family: var(--font-display);
     }
 
     .modal-section-text {
@@ -1018,12 +1061,7 @@
       font-size: 0.9rem;
       color: #1F4D3C;
       margin-bottom: 4px;
-    }
-
-    .modal-highlight-text {
-      font-size: 0.92rem;
-      color: #245A48;
-      font-weight: 600;
+      font-family: var(--font-display);
     }
 
     .modal-footer {
@@ -1064,41 +1102,8 @@
       color: var(--color-dark);
       margin-bottom: 12px;
       line-height: 1.25;
-    }
-
-    .contact-subheadline {
-      font-size: 1.05rem;
-      color: var(--color-text-muted);
-      line-height: 1.65;
-    }
-
-    .contact-perks-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .contact-perk-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.94rem;
-      color: #334155;
-    }
-
-    .perk-check {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background-color: rgba(133, 193, 174, 0.25);
-      border: 1px solid var(--color-success);
-      color: #1F4D3C;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
     }
 
     .contact-details-card {
@@ -1135,6 +1140,7 @@
       font-weight: 700;
       color: var(--color-dark);
       margin-bottom: 2px;
+      font-family: var(--font-display);
     }
 
     .detail-content p, .detail-content a {
@@ -1158,46 +1164,6 @@
       flex-direction: column;
     }
 
-    .form-container-header {
-      margin-bottom: 24px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--color-border-subtle);
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .form-container-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--color-dark);
-      letter-spacing: -0.01em;
-    }
-
-    .form-container-desc {
-      font-size: 0.9rem;
-      color: var(--color-text-muted);
-      margin-top: 4px;
-      line-height: 1.5;
-    }
-
-    .form-security-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      color: #1F4D3C;
-      font-weight: 600;
-      background: rgba(133, 193, 174, 0.2);
-      padding: 5px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(133, 193, 174, 0.5);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    /* Diagnosis Form Grid */
     .diagnosis-form {
       display: flex;
       flex-direction: column;
@@ -1222,9 +1188,6 @@
       .col-span-2 {
         grid-column: span 1;
       }
-      .form-container-header {
-        flex-direction: column;
-      }
     }
 
     .form-group {
@@ -1240,6 +1203,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      font-family: var(--font-display);
     }
 
     .required-star {
@@ -1252,13 +1216,6 @@
       font-size: 0.78rem;
       font-weight: 400;
       color: #94A3B8;
-    }
-
-    .form-hint {
-      font-size: 0.8rem;
-      color: #64748B;
-      line-height: 1.4;
-      margin-bottom: 4px;
     }
 
     .form-input, .form-textarea {
@@ -1334,6 +1291,7 @@
       gap: 10px;
       transition: var(--transition-normal);
       box-shadow: var(--shadow-sm);
+      font-family: var(--font-display);
     }
 
     .form-submit-btn:hover {
@@ -1346,19 +1304,6 @@
       opacity: 0.7;
       cursor: not-allowed;
       transform: none;
-    }
-
-    .form-delivery-note {
-      font-size: 0.82rem;
-      color: #475569;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      line-height: 1.45;
-    }
-
-    .form-delivery-note svg {
-      flex-shrink: 0;
     }
 
     /* Success State Card */
@@ -1388,6 +1333,7 @@
       font-size: 1.28rem;
       color: var(--color-dark);
       font-weight: 700;
+      font-family: var(--font-display);
     }
 
     .success-desc {
@@ -1438,22 +1384,6 @@
       word-break: break-word;
     }
 
-    .success-instruction {
-      font-size: 0.85rem;
-      color: #64748B;
-      max-width: 480px;
-      line-height: 1.5;
-    }
-
-    .success-action-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      margin-top: 4px;
-    }
-
     .reset-form-link-wrap {
       margin-top: 10px;
     }
@@ -1467,24 +1397,16 @@
       cursor: pointer;
       text-decoration: underline;
       padding: 6px 12px;
+      font-family: var(--font-display);
     }
 
     .reset-form-btn:hover {
       color: var(--color-secondary);
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    .spin {
-      animation: spin 1s linear infinite;
     }
 
     /* ==========================================================================
@@ -1522,10 +1444,9 @@
     .delay-1 { transition-delay: 0.1s; }
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
-    .delay-4 { transition-delay: 0.4s; }
 
     /* ==========================================================================
-       9. RESPONSIVE DESIGN (CSS Grid & Flexbox breakpoints)
+       9. RESPONSIVE DESIGN
        ========================================================================== */
     @media (max-width: 1024px) {
       .profile-grid {
@@ -1602,15 +1523,6 @@
 
       .case-studies-grid {
         grid-template-columns: 1fr;
-      }
-
-      .footer-top {
-        flex-direction: column;
-        gap: 32px;
-      }
-
-      .footer-links-group {
-        gap: 32px;
       }
     }
   </style>
@@ -2328,7 +2240,6 @@
       const modalBody = document.getElementById('modalBody');
       const modalCloseBtn = document.getElementById('modalCloseBtn');
       const modalDismissBtn = document.getElementById('modalDismissBtn');
-      const modalCtaBtn = document.getElementById('modalCtaBtn');
 
       function openModal(caseKey) {
         const data = caseStudiesData[caseKey];
@@ -2385,17 +2296,6 @@
       // Close modal on Dismiss button
       if (modalDismissBtn) {
         modalDismissBtn.addEventListener('click', closeModal);
-      }
-
-      // Close modal and smooth-scroll to contact form on CTA button
-      if (modalCtaBtn) {
-        modalCtaBtn.addEventListener('click', function() {
-          closeModal();
-          const contactSec = document.getElementById('contact');
-          if (contactSec) {
-            contactSec.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
       }
 
       // Close on clicking outside modal container
